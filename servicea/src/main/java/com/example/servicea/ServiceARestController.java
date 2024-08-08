@@ -1,13 +1,21 @@
 package com.example.servicea;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class ServiceARestController {
 
-    @GetMapping("/hello")
+    @Value("${server.instance.id}")
+    String instanceId;
+
+
+    @RequestMapping(value = "/ciao", method = RequestMethod.GET)
     public String hello(){
-        return "Hello from Service A controller";
+        System.out.println("instanceId: "+ instanceId);
+        return "ciao da "+ instanceId;
     }
 }

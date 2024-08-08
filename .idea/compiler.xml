@@ -6,14 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="serviceb" />
         <module name="servicea" />
         <module name="eureka-server" />
+        <module name="client1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a" target="17" />
+      <module name="serviceb" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="a" options="-parameters" />
+      <module name="client1" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="servicea" options="-parameters" />
       <module name="serviceb" options="-parameters" />
