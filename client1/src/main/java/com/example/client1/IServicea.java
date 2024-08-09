@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "servicea")
 public interface IServicea {
 
-    @RequestMapping(value = "/api/ciao", method = RequestMethod.GET,name = "servicea")
-    public String helloWorld();
+    @RequestMapping(value = "/api/hello", method = RequestMethod.GET,name = "servicea")
+    public String callServiceA();
 }

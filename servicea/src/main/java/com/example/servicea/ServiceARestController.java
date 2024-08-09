@@ -13,9 +13,9 @@ public class ServiceARestController {
     String instanceId;
 
 
-    @RequestMapping(value = "/ciao", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(){
         System.out.println("instanceId: "+ instanceId);
-        return "ciao da "+ instanceId;
+        return "Hello from ServiceA instance: "+ instanceId;
     }
 }

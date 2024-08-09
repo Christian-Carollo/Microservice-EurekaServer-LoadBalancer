@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClientController {
 
     @Autowired
-    IServicea servicea;
+    IServicea iServicea;
 
-    @RequestMapping(value = "/getName", method = RequestMethod.GET )
-    public String helloWorld(){
-        String res = servicea.helloWorld();
+    @RequestMapping(value = "/servicea", method = RequestMethod.GET )
+    public String callServiceA(){
+        String res = iServicea.callServiceA();
         System.out.println("Res: "+ res);
-        return "Abbiamo chiamato "+ res;
+        return "We called "+ res;
     }
 }
