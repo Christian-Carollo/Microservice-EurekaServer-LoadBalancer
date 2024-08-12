@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/servicec/pom.xml" />
         <option value="$PROJECT_DIR$/client/pom.xml" />
         <option value="$PROJECT_DIR$/client1/pom.xml" />
+        <option value="$PROJECT_DIR$/../Microservice-SpringCloud Getaway- EurekaServer/spring-cloud-gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
