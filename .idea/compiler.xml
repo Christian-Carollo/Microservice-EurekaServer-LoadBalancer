@@ -10,6 +10,7 @@
         <module name="servicea" />
         <module name="eureka-server" />
         <module name="client1" />
+        <module name="resilience" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="a" options="-parameters" />
       <module name="client1" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="resilience" options="-parameters" />
       <module name="servicea" options="-parameters" />
       <module name="serviceb" options="-parameters" />
       <module name="spring-cloud-gateway" options="-parameters" />
