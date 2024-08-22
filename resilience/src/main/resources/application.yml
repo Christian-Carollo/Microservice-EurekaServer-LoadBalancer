@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: resilience
+
+server:
+  port: 8083
+
+resilience4j:
+  retry:
+    instances:
+      recall:
+        max-attempts: 3
+        wait-duration: 1s
+  circuitbreaker:
+    instances:
+      recall:
+        register-health-indicator: true
+        ring-buffer-size-in-closed-state: 5
+        ring-buffer-size-in-half-open-state: 2
+        wait-duration-in-open-state: 1s
+  ratelimiter:
+    instances:
+      default:
+        limit-for-period: 2
+        limit-refresh-period: 5s
+        time-out-duration: 0
+  bulkhead:
+    instances:
+      default:
+        max-concurrent-call: 2
